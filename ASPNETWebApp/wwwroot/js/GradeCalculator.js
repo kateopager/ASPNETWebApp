@@ -39,7 +39,8 @@ $("#calculate").click(function () {
         assignedGrade = "E"
     };
 
-/*    after running through the if statement above, the assigned grade value would be displayed below back on the index page*/
+/*    after running through the if statement above, the assigned grade value would be displayed below back on the index page by using an id in a div tag on the index page
+ to push the result statement back into*/
 
     $("#result").html("Grade received will be " + assignedGrade + " with a " + finalGrade + "% final score.");
 });
