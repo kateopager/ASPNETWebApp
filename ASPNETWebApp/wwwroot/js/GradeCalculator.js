@@ -1,4 +1,5 @@
-﻿$("calculate").click(function () {
+﻿<reference path="../lib/jquery/jquery-3.6.3.min.js" />
+$("#calculate").click(function () {
     alert("hello");
     //Assign the inputs to the variables and make sure they are inputted as integer values rounded
     let Assignments = (parseFloat($("#Assignments").val()) * 50); //after parsing the integer, I multiply it by the weight value
@@ -40,5 +41,5 @@
 
 /*    after running through the if statement above, the assigned grade value would be displayed below back on the index page*/
 
-    $("#result").text = ("Grade received will be ${ assignedGrade } with a ${finalGrade}%.");
+    $("#result").html("Grade received will be ${ assignedGrade } with a ${finalGrade}%.");
 });
