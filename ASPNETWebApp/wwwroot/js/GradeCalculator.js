@@ -1,4 +1,4 @@
-﻿<reference path="../lib/jquery/jquery-3.6.3.min.js" />
+﻿
 $("#calculate").click(function () {
     alert("hello");
     //Assign the inputs to the variables and make sure they are inputted as integer values rounded
