@@ -13,6 +13,7 @@ $("#calculate").click(function () {
 
     let finalGrade = (Assignments + GroupProject + Quizzes + MidtermExam + FinalExam + Intex) / 100; //tried to calculate overall weighted grade, not sure if this is correct
 
+/*    the first if statement below will check if the inputs are valid and between 0-100, if not then it notifies the user to reenter their input*/
     if (finalGrade <= 100){
         //used an if statement to go through all the possibilities for different grades
         if (finalGrade <= 100 && finalGrade >= 94) {
