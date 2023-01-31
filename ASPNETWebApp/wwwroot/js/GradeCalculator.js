@@ -41,5 +41,5 @@ $("#calculate").click(function () {
 
 /*    after running through the if statement above, the assigned grade value would be displayed below back on the index page*/
 
-    $("#result").html("Grade received will be " + assignedGrade + " with a " + finalGrade + "%.");
+    $("#result").html("Grade received will be " + assignedGrade + " with a " + finalGrade + "% final score.");
 });
