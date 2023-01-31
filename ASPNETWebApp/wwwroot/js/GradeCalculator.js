@@ -1,6 +1,4 @@
-﻿$("#btnSend").addEvenListener("click", function ()){
-    print("Grade received will be " + $("#gradescore").value)
-}
+﻿
 
 //Assign the inputs to the variables and make sure they are inputted as integer values rounded
 let Assignments = (parseFloat(document.querySelector("#Assignments").Value)) * 50; //after parsing the integer, I multiply it by the weight value
@@ -10,10 +8,10 @@ let MidtermExam = (parse.Float(document.querySelector("#ME").Value))*10;
 let FinalExam = (parse.Float(document.querySelector("#FE").Value))*10;
 let Intex = (parse.Float(document.querySelector("#I").Value))*10;
 
-let assignedGrade = ""
+let assignedGrade = "" //declared the variable so that it could be assigned a letter grade later
 
-let finalGrade = (Assignments + GroupProject + Quizzes + MidtermExam + FinalExam + Intex)/100
-
+let finalGrade = (Assignments + GroupProject + Quizzes + MidtermExam + FinalExam + Intex)/100 //tried to calculate overall grade, not sure if this is correct
+//used an if statement to go through all the possibilities for different grades
 if (finalGrade <= 100 && finalGrade >= 94) {
     assignedGrade = "A"
 } else if (finalGrade < 94 && finalGrade >= 90) {
@@ -41,4 +39,4 @@ if (finalGrade <= 100 && finalGrade >= 94) {
 }
 
 
-document.querySelector("#result").innerHTML = ("Grade received will be ${ assignedGrade }.")
+document.querySelector("#result").innerHTML = ("Grade received will be ${ assignedGrade } with a ${finalGrade}%.")
