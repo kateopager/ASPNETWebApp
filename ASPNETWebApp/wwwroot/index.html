@@ -2,22 +2,25 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Kate Opager's Killer Site</title>
+    <title>Kate Opager's Killer Site</title> 
     <link rel ="icon" type ="image/x-icon" href="img/favicon.ico"/>
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/kate.css" rel="stylesheet" />
 </head>
-<body>
+<body> <!--I created a header, and then a paragraph with information about my hopes with this class, a picture from my wedding day, and some listed jobs-->
     <header>
         <h1 style="color:antiquewhite"> Kate Opager </h1>
     </header>
 
     <img src="img/6O2A9146.JPEG" />
-    <h1>This photo is from my wedding day, <br /> but I love hanging out with my friends! <br /> 
+    <h1>
+        This photo is from my wedding day, <br /> but I love hanging out with my friends! <br />
     </h1> <br />
-    <p style="padding-left:25%;padding-right:25%">A lot of IS concepts feel easy to understand, but then  when I go to write a program or complete a homework task
-    I feel completely lost.I'm hoping this class will help with my overall understanding of programs/programmer thinking.
-    This class will hopefully help a lot with my overall understanding of IS and help me to continue to build better problem solving skills.</p>
+    <p style="padding-left:25%;padding-right:25%">
+        A lot of IS concepts feel easy to understand, but then  when I go to write a program or complete a homework task
+        I feel completely lost.I'm hoping this class will help with my overall understanding of programs/programmer thinking.
+        This class will hopefully help a lot with my overall understanding of IS and help me to continue to build better problem solving skills.
+    </p>
     <br />
     <p> </p>
 
@@ -28,29 +31,33 @@
         <li>Cyber Security</li>
     </ul>
 
-    <h2 style="color:rosybrown; font-weight:bolder" > Calculate your grade</h2> <br />
-    <p>Input the total percentage you received into each category. <br />The final grade will be estimated
-    and output based off these submissions.</p> <br />
-    <form >
+    <h2 style="color:rosybrown; font-weight:bolder"> Calculate your grade</h2> <br />
+    <p>
+        Input the total percentage you received into each category. <br />The final grade will be estimated
+        and output based off these submissions.
+    </p> <br />
+    <form>
+        <!--in the form I created inputs that receive number values, give them ids(to pass to the js function), and at the end submit them with the button-->
         <label> Assignments </label> <br />
-        <input id="Assignments" /> <br />
+        <input id="Assignments" type="number" /> <br />
         <label> Group Project </label> <br />
-        <input id="GP"/> <br />
+        <input id="GP" type="number" /> <br />
         <label> Quizzes</label> <br />
-        <input id="Q"/><br />
+        <input id="Q" type="number" /><br />
         <label> Midterm Exam </label> <br />
-        <input id="ME"/> <br />
+        <input id="ME" type="number" /> <br />
         <label> Final Exam </label> <br />
-        <input id="FE"/> <br />
+        <input id="FE" type="number" /> <br />
         <label> Intex </label> <br />
-        <input id="I"/> <br /> <br />
-        <input type="button" onclick="gradeCalculator()" style="border:none;background-color:rosybrown;color:floralwhite;font-weight:bolder" value="Submit" /><br /><br />
-
-
-
+        <input id="I" type="number" /> <br /> <br />
+        <input id="calculate" type="button" style="border:none;background-color:rosybrown;color:floralwhite;font-weight:bolder" value="Submit" /><br /><br />
     </form>
+    <div>
+        <p id="result"></p>
+    </div>
+    <!--The scripts below should be including the js calculator, the jquery shortcut/library, and the bootstrap library-->
+    <script src="js/GradeCalculator.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/jquery/jquery-3.6.3.min.js"></script>
-    <script src="js/GradeCalculator.js"></script>
 </body>
 </html>
