@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     @*<title>@ViewBag.Title</title>*@
     <meta charset="utf-8" />
-    <title>@ViewData["Title"]</title>
+    <title>@ViewData["Title"]</title> @*this razor code allows for each page to set a title while using the layout*@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/kate.css" rel="stylesheet" />
@@ -13,17 +13,19 @@
 
 <body>
 
+    @* nav bar using the tag helpers from view imports to direct to and from these pages*@
     <nav>
-        <a href="/">Home</a>
-        <a href="/Blah/Calculator">Grade Calculator</a>
+        <a asp-controller="Blah" asp-action="Index"> Home</a>
+        <a asp-controller="Blah" asp-action="Calculator" > Grade Calculator</a>
     </nav>
 
+    @*the render body will give us the cshtml pages and put them into a formatted body following this layout*@
     <div>
         @RenderBody()
     </div>
 
 
-
+    @*the follow scripts are calling our bootstrap and jquery library to each page using the layout*@
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/jquery/jquery-3.6.3.min.js"></script>
 

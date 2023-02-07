@@ -32,7 +32,7 @@ namespace ASPNETWebApp
 
             app.UseRouting();
 
-            app.UseEndpoints( endpoints =>
+            app.UseEndpoints( endpoints => //we are using the website index page as the location of the endpoint, and we are setting the controller which will call the other views
             {
                 endpoints.MapControllerRoute(
                     name: "default",

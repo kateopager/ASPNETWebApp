@@ -3,9 +3,8 @@
     *@
 @{
     ViewData["Title"] = "Kate Opager's Killer Site";
-    
 }
-@model CalculatorModel;
+@model CalculatorModel <!--I am unsure as to why my viewimports will not put this into razor code so that the calculator model can be called. I have tried everything.-->
 
 <h2 style="color:rosybrown; font-weight:bolder"> Calculate your grade</h2>
 <br />
@@ -16,6 +15,7 @@
 <br />
 <form method="post">
     <!--in the form I created inputs that receive number values, give them ids(to pass to the js function), and at the end submit them with the button-->
+    <!--Side note: the asp-for is assigning the input to the same name in the Calculator Model so that the inputs can get get/set and validated.-->
     <label> Assignments </label> <br />
     <input id="Assignments" type="number" asp-for="Assignments"/> <br />
     <label> Group Project </label> <br />
